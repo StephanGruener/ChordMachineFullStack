@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+<!-- Header + navigation -->
+<div class="header">
+    meine Songs
+</div> 
+<div calss="header">
+    <div class="flexContainerHorizontal">
+        <a href="allfunctions.html">
+            <div class="menuPoint">
+                alle Funktionen
+            </div>
+        </a>
+        
+        <a href="manual.html">
+            <div class="menuPoint">
+                manueller Modus
+            </div>
+        </a>
+        <a href="mysongs.html">
+            <div class="menuPoint">
+                meine Songs
+            </div>
+        </a>
+        <a href="newsong.html">
+            <div class="menuPoint">
+                neuer Song
+            </div>
+        </a>
+    </div>
+</div>
+
+
+    <div class="containerCentered">
+        <input type="text" id="inputForSearch" placeholder="Songname">
+        <input type="button" onclick=showSongID(true) value="suchen">
+    </div>
+    <script>
+        showAllSongs();
+    </script>
+    <div id="bigDiv" name="invisible">
+       
+
+        <div class="flexContainerHorizontal" name="horizontalChordList">
+            <div class="flexContainerVertical" name="verticalChordList">
+                <input type="button" value="C" class="chordInList" onclick="postAccord(1,this.value)">
+                <input type="button" value="C7" class="chordInList" onclick="postAccord(1,this.value)">
+                <input type="button" value="Cmaj7" class="chordInList" onclick="postAccord(1,this.value)">
+            </div>
+            <div class="flexContainerVertical" name="verticalChordList">
+                <input type="button" value="D" class="chordInList" onclick="postAccord(1,this.value)">
+                <input type="button" value="D7" class="chordInList" onclick="postAccord(1,this.value)">
+                <input type="button" value="Dm" class="chordInList" onclick="postAccord(1,this.value)">
+            </div>
+            <div class="flexContainerVertical" name="verticalChordList">
+                <input type="button" value="E" class="chordInList" onclick="postAccord(1,this.value)">
+                <input type="button" value="E7" class="chordInList" onclick="postAccord(1,this.value)">
+                <input type="button" value="Em" class="chordInList" onclick="postAccord(1,this.value)">
+                <input type="button" value="Em7" class="chordInList" onclick="postAccord(1,this.value)">
+            </div>
+            <div class="flexContainerVertical" name="verticalChordList">
+                <input type="button" value="F" class="chordInList" onclick="postAccord(1,this.value)">
+                <input type="button" value="Fmaj7" class="chordInList" onclick="postAccord(1,this.value)">
+            </div>
+            <div class="flexContainerVertical" name="verticalChordList">
+                <input type="button" value="G" class="chordInList" onclick="postAccord(1,this.value)">
+                <input type="button" value="G7" class="chordInList" onclick="postAccord(1,this.value)">
+            </div>
+            <div class="flexContainerVertical" name="verticalChordList">
+                <input type="button" value="A" class="chordInList" onclick="postAccord(1,this.value)">
+                <input type="button" value="A7" class="chordInList" onclick="postAccord(1,this.value)">
+                <input type="button" value="Am" class="chordInList" onclick="postAccord(1,this.value)">
+                <input type="button" value="Am7" class="chordInList" onclick="postAccord(1,this.value)">
+            </div>
+            <div class="flexContainerVertical" name="verticalChordList">
+                <input type="button" value="Bb" class="chordInList" onclick="postAccord(1,this.value)">
+                <input type="button" value="B7" class="chordInList" onclick="postAccord(1,this.value)">
+            </div>
+            <div class="flexContainerVertical" name="verticalChordList" style="font-size:large">
+                Länge:
+                <select name="length" id="length">
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                </select>
+            </div>
+        </div>
+        <div class="containerCentered">
+            <input type="button" style="padding: 10px; font-size: large; background-color: rgb(255,255,255);" value="schließen" onclick="hideChordSelector()">
+        </div>
+    </div>
+    <div id="response"></div>
+    
+
+    <!-- TODO: hide when name = invisible; show only if song not empty -->
+    <!-- <div id="addChords" name="invisible">
+        <div>
+            chord:
+            <select name="accord" id="accord">
+                <option value="Am">Am</option>
+                <option value="C">C</option>
+            </select><br>
+            Length:
+            <select name="length" id="length">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+            </select><br>
+            <input type="button" value="add" onclick=postAccord()>
+            <input type="button" value="save" onclick=saveSong()>
+            <input type="button" value="showCurrentSong" onclick=showCurrentSong()>
+            <input type="button" value="prepareSong" onclick=prepareSongForESP32()>
+            <input type="button" value="playSong" onclick=sendSongToESP32()>
+        </div> -->
+    </div>
+
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+<!-- Header + navigation -->
+<div class="header">
+    neuer Song
+</div>    
+<div class="containerLeft">
+        <a href="allfunctions.html">
+            <div class="menuPoint">
+                alle Funktionen
+            </div>
+        </a>
+        
+        <a href="manual.html">
+            <div class="menuPoint">
+                manueller Modus
+            </div>
+        </a>
+        <a href="mysongs.html">
+            <div class="menuPoint">
+                meine Songs
+            </div>
+        </a>
+        <a href="newsong.html">
+            <div class="menuPoint">
+                neuer Song
+            </div>
+        </a>
+    </div>
+
+    <div class="bpm">
+        beats per minute: <input type="text" placeholder="bpm" id="bpm">
+        Song Name: <input type="text" placeholder="song name" id="songName">
+        <script>
+            const bpm = document.getElementById("bpm");
+            const songName = document.getElementById("songName");
+        </script>
+        <input type="button" value="speichern" onclick="createNewSong(songName.value, bpm.value)">
+    </div>
+</body>
+
+</html>

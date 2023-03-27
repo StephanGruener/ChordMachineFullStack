@@ -1,0 +1,222 @@
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+body{
+    background: linear-gradient(to bottom, rgb(0, 187, 255), aquamarine);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#response > * {
+    background-color: rgba(255,255,255,0.5);
+    color: rgb(65, 65, 65);
+    border: 5px azure;
+    border-radius: 20px;
+    margin: 1%;
+    font-family: arial;
+    font-style: bold;
+    text-align: center;
+
+}
+#response {
+    margin: 10%;
+    margin-top: 3%;
+    padding-inline: 10%;
+    padding-block:5%;
+    background-color: rgba(255,255,255,0.5);
+    font-family: arial;
+    text-align: center;
+    color: rgb(65, 65, 65);
+}
+
+
+img {
+    width: 20px;
+    height: 20px;
+  }
+
+.menuPoint {
+    background-color: rgba(255,255,255,0.7);
+    margin: 3px;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    font-family: arial;
+    padding-block: 5px;
+    width: 23vw;
+}
+
+.menuPoint:hover {
+    background-color: rgba(255,255,255,0.8);
+    margin: 3px;
+    border-radius: 5px;
+    text-align: center;
+    color: red;
+    font-family: arial;
+}
+
+
+.container{
+    margin: 15%;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+.flexContainerHorizontal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flexContainerHorizontal[name="horizontalChordList"]{
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(to bottom, rgb(0, 187, 255), aquamarine);
+    margin: 5px;
+    width: fit-content;
+    justify-content: center;
+    gap: 5px;
+}
+
+.flexContainerVertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flexContainerVertical[name="verticalChordList"]{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    width: auto;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.containerLeft{
+    margin-top: 15%;
+    float: left;
+    position: fixed;
+}
+
+.header{
+    background-color: rgba(255,255,255,0.5);
+    font-family: arial;
+    text-align: center;
+    font-size: xx-large;
+    color: white;
+    padding: 2%;
+}
+.bpm{
+    background-color: rgba(255,255,255,0.5);
+    font-family: arial;
+    text-align: center;
+    font-size: large;
+    color: rgb(65, 65, 65);
+    padding: 1%;
+    margin-top: 3px;
+}
+
+
+.containerCentered{
+    display: flex;
+    justify-content: center;
+}
+.updateAccord{
+    background-color: rgba(255,255,255,0.5);
+    font-family: arial;
+    text-align: center;
+    font-size: large;
+    color: rgb(65, 65, 65);
+    height: 8vh;
+    width: 12vw;
+}
+
+.manualAccord{
+    background-color: rgba(255,255,255,0.5);
+    font-family: arial;
+    text-align: center;
+    font-size: large;
+    color: rgb(65, 65, 65);
+    height: 40vh;
+    width: 12vw;
+}
+
+.manualAccord[name="1"]{
+    background-color: rgba(255,255,255,1);
+    font-family: arial;
+    text-align: center;
+    font-size: large;
+    color: rgb(65, 65, 65);
+    height: 40vh;
+    width: 12vw;
+}
+
+
+input[type=text]{
+    background-color: rgba(255,255,255,0.8);
+    border: 0px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    margin: 10px;
+}
+
+input[type=button]{
+    background-color: rgba(255,255,255,0.8);
+    border: 0px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    margin: 10px;
+}
+input[type=button].chordInList{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 0px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    margin: 3px;
+    width: 10vw;
+    height: 8vh;
+}
+
+#bigDiv[name="invisible"]{
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: arial;
+    text-align: center;
+    font-size: large;
+    color: rgb(65, 65, 65);
+    padding: 1%;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+#bigDiv[name="visible"]{
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: arial;
+    text-align: center;
+    font-size: large;
+    color: rgb(65, 65, 65);
+    padding: 0%;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+

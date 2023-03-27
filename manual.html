@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+<!-- Header + navigation -->
+<div class="header">
+    manueller Modus
+</div> 
+<div calss="header">
+    <div class="flexContainerHorizontal">
+        <a href="allfunctions.html">
+            <div class="menuPoint">
+                alle Funktionen
+            </div>
+        </a>
+        
+        <a href="manual.html">
+            <div class="menuPoint">
+                manueller Modus
+            </div>
+        </a>
+        <a href="mysongs.html">
+            <div class="menuPoint">
+                meine Songs
+            </div>
+        </a>
+        <a href="newsong.html">
+            <div class="menuPoint">
+                neuer Song
+            </div>
+        </a>
+    </div>
+</div>
+
+
+<!-- main body -->
+    <div class="bpm">
+        beats per minute: <input type="text" placeholder="bpm" id="bpm">
+        <script>const bpm = document.getElementById("bpm");</script>
+        <input type="button" value="update" onclick="sendBPM(bpm.value)">
+    </div>
+
+    <div class="flexContainerHorizontal">
+        <div class="flexContainerVertical">
+            <input type="button" class ="manualAccord" id ="1" value="Am" name = "0" onclick="sendChord(this.id)">
+            <input type="button" value="ändern" class="updateAccord" onclick="chordSelector(1)">
+        </div>
+        <div class="flexContainerVertical">
+            <input type="button" class ="manualAccord" id ="2" value="F" name = "0" onclick="sendChord(this.id)">
+            <input type="button" value="ändern" class="updateAccord" onclick="chordSelector(2)">
+        </div>
+        <div class="flexContainerVertical">
+            <input type="button" class ="manualAccord" id ="3" value="G" name = "0" onclick="sendChord(this.id)">
+            <input type="button" value="ändern" class="updateAccord" onclick="chordSelector(3)">
+        </div>
+        <div class="flexContainerVertical">
+            <input type="button" class ="manualAccord" id ="4" value="C" name = "0" onclick="sendChord(this.id)">
+            <input type="button" value="ändern" class="updateAccord" onclick="chordSelector(4)">
+        </div>
+        <div class="flexContainerVertical">
+            <input type="button" class ="manualAccord" id ="5" value="Em" name = "0" onclick="sendChord(this.id)">
+            <input type="button" value="ändern" class="updateAccord" onclick="chordSelector(5)">
+        </div>
+        <div class="flexContainerVertical">
+            <input type="button" class ="manualAccord" id ="6" value="D" name = "0" onclick="sendChord(this.id)">
+            <input type="button" value="ändern" class="updateAccord" onclick="chordSelector(6)">
+        </div>
+        <div class="flexContainerVertical">
+            <input type="button" class ="manualAccord" id ="7" value="A" name = "0" onclick="sendChord(this.id)">
+            <input type="button" value="ändern" class="updateAccord" onclick="chordSelector(7)">
+        </div>
+    </div>
+
+    <!-- list of all available chords -->
+    <div id="bigDiv" name="invisible" onclick="hideChordSelector()">
+       
+
+        <div class="flexContainerHorizontal" name="horizontalChordList">
+            <div class="flexContainerVertical" name="verticalChordList">
+                <input type="button" value="C" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="C7" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="Cmaj7" class="chordInList" onclick="changeChord(this.name, this.value)">
+            </div>
+            <div class="flexContainerVertical" name="verticalChordList">
+                <input type="button" value="D" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="D7" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="Dm" class="chordInList" onclick="changeChord(this.name, this.value)">
+            </div>
+            <div class="flexContainerVertical" name="verticalChordList">
+                <input type="button" value="E" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="E7" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="Em" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="Em7" class="chordInList" onclick="changeChord(this.name, this.value)">
+            </div>
+            <div class="flexContainerVertical" name="verticalChordList">
+                <input type="button" value="F" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="Fmaj7" class="chordInList" onclick="changeChord(this.name, this.value)">
+            </div>
+            <div class="flexContainerVertical" name="verticalChordList">
+                <input type="button" value="G" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="G7" class="chordInList" onclick="changeChord(this.name, this.value)">
+            </div>
+            <div class="flexContainerVertical" name="verticalChordList">
+                <input type="button" value="A" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="A7" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="Am" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="Am7" class="chordInList" onclick="changeChord(this.name, this.value)">
+            </div>
+            <div class="flexContainerVertical" name="verticalChordList">
+                <input type="button" value="Bb" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="B7" class="chordInList" onclick="changeChord(this.name, this.value)">
+            </div>
+        </div>
+
+         <!-- for portrait mode -->
+        <!-- <div class="flexContainerVertical" name="verticalChordList">
+            <div class="flexContainerHorizontal" name="horizontalChordList">
+                <input type="button" value="C" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="C7" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="Cmaj7" class="chordInList" onclick="changeChord(this.name, this.value)">
+            </div>
+            <div class="flexContainerHorizontal" name="horizontalChordList">
+                <input type="button" value="D" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="D7" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="Dm" class="chordInList" onclick="changeChord(this.name, this.value)">
+            </div>
+            <div class="flexContainerHorizontal" name="horizontalChordList">
+                <input type="button" value="E" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="E7" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="Em" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="Em7" class="chordInList" onclick="changeChord(this.name, this.value)">
+            </div>
+            <div class="flexContainerHorizontal" name="horizontalChordList">
+                <input type="button" value="F" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="Fmaj7" class="chordInList" onclick="changeChord(this.name, this.value)">
+            </div>
+            <div class="flexContainerHorizontal" name="horizontalChordList">
+                <input type="button" value="G" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="G7" class="chordInList" onclick="changeChord(this.name, this.value)">
+            </div>
+            <div class="flexContainerHorizontal" name="horizontalChordList">
+                <input type="button" value="A" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="A7" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="Am" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="Am7" class="chordInList" onclick="changeChord(this.name, this.value)">
+            </div>
+            <div class="flexContainerHorizontal" name="horizontalChordList">
+                <input type="button" value="Bb" class="chordInList" onclick="changeChord(this.name, this.value)">
+                <input type="button" value="B7" class="chordInList" onclick="changeChord(this.name, this.value)">
+            </div>
+        </div> -->
+
+          
+
+    </div>
+</body>
+
+</html>

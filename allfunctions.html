@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+ 
+<body>
+    <!-- Header + navigation -->
+    <div class="header">
+        ChordMachine
+    </div>    
+    <div class="containerLeft">
+            <a href="allfunctions.html">
+                <div class="menuPoint">
+                    alle Funktionen
+                </div>
+            </a>
+            
+            <a href="manual.html">
+                <div class="menuPoint">
+                    manueller Modus
+                </div>
+            </a>
+            <a href="mysongs.html">
+                <div class="menuPoint">
+                    meine Songs
+                </div>
+            </a>
+            <a href="newsong.html">
+                <div class="menuPoint">
+                    neuer Song
+                </div>
+            </a>
+        </div>
+    
+    <div>
+        <input type="text" id="inputForSearch" placeholder="song to show">
+        <input type="button" onclick=showSongID(true) value="show">
+    </div> 
+    <div id="response"></div>
+
+    <div>
+        Name of your Song:
+        <input id="songID" type="text" placeholder="Song"><br>
+        Accord:
+        <select name="accord" id="accord">
+            <option value="Am">Am</option>
+            <option value="C">C</option>
+        </select><br>
+        Length:
+        <select name="length" id="length">
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+        </select><br>
+        Position:
+        <select name="position" id="position">
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+        </select><br>
+        <input type="button" onclick=postAccord(songID,accord,length,position) value="post accord">
+    </div>
+    <div>
+        <input type="button" value="show all" onclick=showAll()>
+    </div>
+    <div>
+        <input type="button" value="show all, but nice" onclick=showAllPretty()>
+    </div>
+    <div>
+        <input type="button" value="show current" onclick=deleteAccord()>
+    </div>
+    </body>
+ 
+ 
+ 
+</html>
